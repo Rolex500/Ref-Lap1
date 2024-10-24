@@ -1,0 +1,57 @@
+/* General Slider Styles */
+.homepage-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.homepage-slider {
+    position: relative;
+    display: none; /* Hide all slides initially */
+    width: 100%;
+}
+
+.homepage-slider img {
+    width: 100%;
+    height: auto;
+}
+
+/* Slide Content Styling */
+.slide-content {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+    width: 80%;
+}
+
+/* Desktop Specific Styles */
+@media (min-width: 768px) {
+    .homepage-slider {
+        height: 400px; /* Set the height for desktop */
+    }
+
+    .slide-content {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 767px) {
+    .homepage-slider {
+        height: 250px; /* Set the height for mobile */
+    }
+
+    .slide-content {
+        font-size: 1rem;
+        padding: 10px;
+        width: 90%;
+    }
+}
+
+/* Show the first slide by default */
+.homepage-slider .slide:first-child {
+    display: block;
+}
